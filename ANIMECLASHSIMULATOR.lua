@@ -108,6 +108,25 @@ end
   	end    
 })
 
+local Section = Tab:AddSection({
+	Name = "Egg"
+})
+
+Tab:AddToggle({
+	Name = "600t Wins Egg",
+	Default = false,
+	Callback = function(Value)
+		_G.autoEgg600t = Value
+  while _G.autoEgg600t and wait() do
+local args = {
+    [1] = "Egg20"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Function"):WaitForChild("Luck"):WaitForChild("[C-S]DoLuck"):InvokeServer(unpack(args))
+end
+	end    
+})
+
 
 
 
