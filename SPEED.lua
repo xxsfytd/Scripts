@@ -70,12 +70,12 @@ Tab:AddToggle({
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9732, 1, 10212)
 		
 		local args = {
-    [1] = "Desert",
+    [1] = "Steampunk",
     [2] = "Single"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("EggOpened"):InvokeServer(unpack(args))
-end
+ end
 	end    
 })
 
