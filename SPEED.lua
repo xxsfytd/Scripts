@@ -16,7 +16,7 @@ Tab:AddToggle({
 	Default = false,
 	Callback = function(Value)
 		_G.autoWin = Value
-		while _G.autoWin and wait() do
+		while _G.autoWin and wait(5) do
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9669, 2, 22450)
 		end
 	end    
@@ -80,6 +80,24 @@ end
 })
 
 Tab:AddLabel("Cost 300 Wins")
+
+Tab:AddToggle({
+	Name = "Auto Craft All",
+	Default = false,
+	Callback = function(Value)
+		_G.autoCraftAll = Value
+		while _G.autoCraftAll and wait() do
+		local args = {
+    [1] = "MaxCraft",
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("PetActionRequest"):InvokeServer(unpack(args))
+end
+	end    
+})
+
+
 
 
 
