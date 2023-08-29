@@ -17,7 +17,7 @@ Tab:AddToggle({
 	Callback = function(Value)
 		_G.autoWin = Value
 		while _G.autoWin and wait(5) do
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9670, 21, 22445)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9675, -2, 22434)
 		end
 	end    
 })
