@@ -67,7 +67,7 @@ Tab:AddToggle({
 	Callback = function(Value)
 		_G.autoHatchBestEgg = Value
 		while _G.autoHatchBestEgg and wait() do
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9669, -3, 22444)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9732, 1, 10212)
 		
 		local args = {
     [1] = "Desert",
