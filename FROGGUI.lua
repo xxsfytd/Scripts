@@ -48,6 +48,13 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "Dont Make The Rock Angry",
+	Callback = function()
+      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/DONTMAKETHEROCKANGRY.lua')))()
+  	end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "Fe",
 	Icon = "rbxassetid://4483345998",
@@ -215,6 +222,33 @@ Tab:AddButton({
 
 local TeleportService = game:GetService("TeleportService")
 local destinationPlaceId = 12742233841 -- Replace this with the Place ID of the destination game
+
+local function teleportPlayer(player)
+    local success, errorMsg = pcall(function()
+        TeleportService:Teleport(destinationPlaceId, player)
+    end)
+
+    if not success then
+        print("Teleport failed:", errorMsg)
+    end
+end
+
+game.Players.PlayerAdded:Connect(function(player)
+    player.CharacterAdded:Connect(function(character)
+        teleportPlayer(player)
+    end)
+end)
+
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Dont Make The Rock Angry Game",
+	Callback = function()
+      		-- Place this code in a script in Roblox Studio
+
+local TeleportService = game:GetService("TeleportService")
+local destinationPlaceId = 12979480582 -- Replace this with the Place ID of the destination game
 
 local function teleportPlayer(player)
     local success, errorMsg = pcall(function()
