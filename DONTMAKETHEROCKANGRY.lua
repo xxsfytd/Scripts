@@ -10,15 +10,25 @@ local Tab = Window:MakeTab({
 Tab:AddLabel("before turning on the auto teleport")
 Tab:AddLabel("click the Platform First")
 
-Tab:AddToggle({
+Tab:AddButton({
 	Name = "Auto Teleport",
-	Default = false,
-	Callback = function(Value)
-	_G.autoTeleport = Value
-	while _G.autoTeleport and wait() do
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(504, 128, 1831)
-		end
-	end    
+	Callback = function()
+      		local function moveCharacter()
+    while true do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(504, 128, 1831)
+        wait(1) -- Adjust the interval as needed
+    end
+end
+
+-- Initial movement
+moveCharacter()
+
+-- Reapply the movement when the character is reset
+game.Players.LocalPlayer.CharacterAdded:Connect(function(character)
+    moveCharacter()
+end)
+
+  	end    
 })
 
 Tab:AddButton({
@@ -50,3 +60,4 @@ game:GetService("Workspace").CurrentCamera.CameraSubject = part
 })
 
 
+OrionLib:Init()
