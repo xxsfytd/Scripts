@@ -79,7 +79,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("
 	end    
 })
 
-Tab:AddLabel("Cost 300 Wins")
+Tab:AddLabel("Cost 500 Wins")
 
 Tab:AddToggle({
 	Name = "Auto Craft All",
