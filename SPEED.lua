@@ -22,6 +22,17 @@ Tab:AddToggle({
 	end    
 })
 
+Tab:AddToggle({
+	Name = "Fast Auto Win",
+	Default = false,
+	Callback = function(Value)
+		_G.autoWin = Value
+		while _G.autoWin and wait(1) do
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9675, -2, 22434)
+		end
+	end    
+})
+
 Tab:AddLabel("Required 200 Speed To Win")
 
 Tab:AddToggle({
@@ -79,7 +90,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("
 	end    
 })
 
-Tab:AddLabel("Cost 500 Wins")
+Tab:AddLabel("Cost 300 Wins")
 
 Tab:AddToggle({
 	Name = "Auto Craft All",
