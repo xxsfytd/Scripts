@@ -92,12 +92,13 @@ local function teleportToPart(part)
     end
 end
 
-local function onCharacterAdded(character)
-    local mainPart = findPartInFolder(workspace)
-    teleportToPart(mainPart)
+while true do
+    pcall(function()
+        local mainPart = findPartInFolder(workspace)
+        teleportToPart(mainPart)
+    end)
+    wait(0.1) -- Adjust the time interval as needed
 end
-
-game.Players.LocalPlayer.CharacterAdded:Connect(onCharacterAdded)
 
   	end    
 })
