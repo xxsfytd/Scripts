@@ -67,7 +67,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-	Name = "Auto Win",
+	Name = "Auto Win Obby",
 	Callback = function()
       		local function findPartInFolder(folder)
     for _, child in ipairs(folder:GetChildren()) do
