@@ -16,7 +16,7 @@ Tab:AddButton({
 local function moveCharacter()
     while true do
         game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(504, 128, 1831)
-        wait(1) -- Adjust the interval as needed
+        wait(0.1) -- Adjust the interval as needed
     end
 end
 
