@@ -15,7 +15,7 @@ Tab:AddButton({
 	Callback = function()
 local function moveCharacter()
     while true do
-        game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(504, 128, 1831)
+        game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(9, 496, 24)
         wait(0.1) -- Adjust the interval as needed
     end
 end
@@ -35,7 +35,7 @@ Tab:AddButton({
 	Name = "Platform",
 	Callback = function()
 	
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(504, 128, 1831)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9, 496, 24)
 	
       		-- Get a reference to the LocalPlayer
 local player = game.Players.LocalPlayer
