@@ -69,7 +69,7 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Auto Win Obby",
 	Callback = function()
-      		local function findPartInFolder(folder)
+	local function findPartInFolder(folder)
     for _, child in ipairs(folder:GetChildren()) do
         if child:IsA("Folder") then
             local part = child:FindFirstChild("End")
@@ -92,11 +92,12 @@ local function teleportToPart(part)
     end
 end
 
-while true do
+local function onCharacterAdded(character)
     local mainPart = findPartInFolder(workspace)
     teleportToPart(mainPart)
-    wait(1) -- Adjust the time interval as needed
 end
+
+game.Players.LocalPlayer.CharacterAdded:Connect(onCharacterAdded)
 
   	end    
 })
