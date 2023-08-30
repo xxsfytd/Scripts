@@ -69,36 +69,26 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Auto Win Obby",
 	Callback = function()
-	local function findPartInFolder(folder)
-    for _, child in ipairs(folder:GetChildren()) do
-        if child:IsA("Folder") then
-            local part = child:FindFirstChild("End")
-            if part and part:IsA("BasePart") then
-                return part
-            else
-                local result = findPartInFolder(child)
-                if result then
-                    return result
-                end
-            end
+	while wait() do
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+local endPartName = "End"  -- Change this to the name of the End part
+
+local function teleportEndPartToPlayer(parent)
+    for _, child in ipairs(parent:GetChildren()) do
+        if child:IsA("Part") and child.Name == endPartName then
+            child.CFrame = humanoidRootPart.CFrame
         end
+        teleportEndPartToPlayer(child)
     end
 end
 
-local function teleportToPart(part)
-    if part then
-        local player = game.Players.LocalPlayer
-        player.Character:SetPrimaryPartCFrame(CFrame.new(part.Position + Vector3.new(0, 5, 0)))
-    end
+-- Start the search from the entire workspace
+teleportEndPartToPlayer(game.Workspace)
 end
 
-while true do
-    pcall(function()
-        local mainPart = findPartInFolder(workspace)
-        teleportToPart(mainPart)
-    end)
-    wait(0.1) -- Adjust the time interval as needed
-end
 
   	end    
 })
