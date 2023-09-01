@@ -111,5 +111,16 @@ end
   	end    
 })
 
+local Section = Tab:AddSection({
+	Name = "Good"
+})
+
+Tab:AddButton({
+	Name = "Anti Afk",
+	Callback = function()
+      		loadstring(game:HttpGet(('https://pastebin.com/raw/Btt5A3CC')))()
+  	end    
+})
+
 
 OrionLib:Init()
