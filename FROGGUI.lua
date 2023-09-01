@@ -93,6 +93,13 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "One Piece Tycoon",
+	Callback = function()
+      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/ONEPIECEISREAL.lua')))()
+  	end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "Fe Tab",
 	Icon = "rbxassetid://6288032018",
