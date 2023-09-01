@@ -18,7 +18,7 @@ local character = player.Character
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
 local tweenInfo = TweenInfo.new(
-    300, -- Duration of the tween in seconds
+    150, -- Duration of the tween in seconds
     Enum.EasingStyle.Quad, -- Easing style
     Enum.EasingDirection.Out, -- Easing direction
     0, -- Number of times to repeat
