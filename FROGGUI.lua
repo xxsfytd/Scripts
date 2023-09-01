@@ -4,13 +4,37 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Frog Gui 🐸", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local Tab = Window:MakeTab({
-	Name = "Script Hub",
-	Icon = "rbxassetid://4483345998",
+	Name = " Home",
+	Icon = "rbxassetid://6288032018",
 	PremiumOnly = false
 })
 
 local Section = Tab:AddSection({
-	Name = "all made by frog"
+	Name = "Thank You For Using it"
+})
+
+Tab:AddButton({
+	Name = "Reset Character",
+	Callback = function()
+      		game:GetService("Players").LocalPlayer.Character:BreakJoints()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "R6 Animate",
+	Callback = function()
+      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Imagnir/r6_anims_for_r15/main/r6_anims.lua'),true))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Script Hub",
+	Icon = "rbxassetid://6288032018",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "My Scripts"
 })
 
 Tab:AddButton({
@@ -55,14 +79,28 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "Radio Star Simulator",
+	Callback = function()
+      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/RADIOGAME.lua')))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Jetpack Obby",
+	Callback = function()
+      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/JETPACKOBBY.lua')))()
+  	end    
+})
+
 local Tab = Window:MakeTab({
-	Name = "Fe",
-	Icon = "rbxassetid://4483345998",
+	Name = "Fe Tab",
+	Icon = "rbxassetid://6288032018",
 	PremiumOnly = false
 })
 
 local Section = Tab:AddSection({
-	Name = "Fe Admin"
+	Name = "Fe Admin Section"
 })
 
 Tab:AddButton({
@@ -80,7 +118,7 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
-	Name = "Dex Versions"
+	Name = "Dex Versions Section"
 })
 
 Tab:AddButton({
@@ -100,172 +138,100 @@ Tab:AddButton({
 Tab:AddLabel("Dark Dex Supports Mobile and Pc")
 
 local Tab = Window:MakeTab({
-	Name = "Teleport Games",
-	Icon = "rbxassetid://4483345998",
+	Name = "Mobile Tab",
+	Icon = "rbxassetid://6288032018",
 	PremiumOnly = false
 })
 
-Tab:AddLabel("Might Take a While")
+local Section = Tab:AddSection({
+	Name = "Mobile Section"
+})
 
 Tab:AddButton({
-	Name = "Dank Murder Game",
+	Name = "Keyboard",
 	Callback = function()
-      		-- Place this code in a script in Roblox Studio
-
-local TeleportService = game:GetService("TeleportService")
-local destinationPlaceId = 9421227126 -- Replace this with the Place ID of the destination game
-
-local function teleportPlayer(player)
-    local success, errorMsg = pcall(function()
-        TeleportService:Teleport(destinationPlaceId, player)
-    end)
-
-    if not success then
-        print("Teleport failed:", errorMsg)
-    end
-end
-
-game.Players.PlayerAdded:Connect(function(player)
-    player.CharacterAdded:Connect(function(character)
-        teleportPlayer(player)
-    end)
-end)
-
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
   	end    
 })
 
 Tab:AddButton({
-	Name = "Push Simulator Game",
+	Name = " Fly",
 	Callback = function()
-      		-- Place this code in a script in Roblox Studio
+      		loadstring(game:HttpGet(('https://pastebin.com/raw/QGLvkvU7')))()
+  	end    
+})
 
-local TeleportService = game:GetService("TeleportService")
-local destinationPlaceId = 13681795330 -- Replace this with the Place ID of the destination game
+local Tab = Window:MakeTab({
+	Name = "Troll Tab",
+	Icon = "rbxassetid://6288032018",
+	PremiumOnly = false
+})
 
-local function teleportPlayer(player)
-    local success, errorMsg = pcall(function()
-        TeleportService:Teleport(destinationPlaceId, player)
-    end)
+local Section = Tab:AddSection({
+	Name = "Troll Section"
+})
 
-    if not success then
-        print("Teleport failed:", errorMsg)
-    end
-end
-
-game.Players.PlayerAdded:Connect(function(player)
-    player.CharacterAdded:Connect(function(character)
-        teleportPlayer(player)
-    end)
-end)
-
+Tab:AddButton({
+	Name = "Invisible",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Invisible%20Gui'))()
   	end    
 })
 
 Tab:AddButton({
-	Name = "Anime Clash Simulator",
+	Name = "Touch Fling",
 	Callback = function()
-      		-- Place this code in a script in Roblox Studio
-
-local TeleportService = game:GetService("TeleportService")
-local destinationPlaceId = 13370783664 -- Replace this with the Place ID of the destination game
-
-local function teleportPlayer(player)
-    local success, errorMsg = pcall(function()
-        TeleportService:Teleport(destinationPlaceId, player)
-    end)
-
-    if not success then
-        print("Teleport failed:", errorMsg)
-    end
-end
-
-game.Players.PlayerAdded:Connect(function(player)
-    player.CharacterAdded:Connect(function(character)
-        teleportPlayer(player)
-    end)
-end)
-
+      		-- Subscribe to Coldster
+-- https://discord.gg/4EbnAbXDPY
+loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Fling%20GUI"))()
   	end    
 })
 
 Tab:AddButton({
-	Name = "Free Ugc Every 2 Min Game",
+	Name = "Chat Troll",
 	Callback = function()
-      		-- Place this code in a script in Roblox Studio
-
-local TeleportService = game:GetService("TeleportService")
-local destinationPlaceId = 14326527807 -- Replace this with the Place ID of the destination game
-
-local function teleportPlayer(player)
-    local success, errorMsg = pcall(function()
-        TeleportService:Teleport(destinationPlaceId, player)
-    end)
-
-    if not success then
-        print("Teleport failed:", errorMsg)
-    end
-end
-
-game.Players.PlayerAdded:Connect(function(player)
-    player.CharacterAdded:Connect(function(character)
-        teleportPlayer(player)
-    end)
-end)
-
+      		loadstring(game:HttpGet(('https://pastefy.app/zCFEwaYq/raw'),true))()
   	end    
 })
 
 Tab:AddButton({
-	Name = "+1 Speed Per Second Game",
+	Name = "Spy Gui",
 	Callback = function()
-      		-- Place this code in a script in Roblox Studio
-
-local TeleportService = game:GetService("TeleportService")
-local destinationPlaceId = 12742233841 -- Replace this with the Place ID of the destination game
-
-local function teleportPlayer(player)
-    local success, errorMsg = pcall(function()
-        TeleportService:Teleport(destinationPlaceId, player)
-    end)
-
-    if not success then
-        print("Teleport failed:", errorMsg)
-    end
-end
-
-game.Players.PlayerAdded:Connect(function(player)
-    player.CharacterAdded:Connect(function(character)
-        teleportPlayer(player)
-    end)
-end)
-
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/MichaelScripter/MiniScript/main/Spy%20gui.lua"))()
   	end    
 })
 
+local Tab = Window:MakeTab({
+	Name = "Fun Tab",
+	Icon = "rbxassetid://6288032018",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Fun Section"
+})
+
 Tab:AddButton({
-	Name = "Dont Make The Rock Angry Game",
+	Name = "Tools",
 	Callback = function()
-      		-- Place this code in a script in Roblox Studio
+      		loadstring(game:HttpGet(('https://pastefy.app/VYIAk3o1/raw'),true))()
+  	end    
+})
 
-local TeleportService = game:GetService("TeleportService")
-local destinationPlaceId = 12979480582 -- Replace this with the Place ID of the destination game
+local Tab = Window:MakeTab({
+	Name = "Special Tab",
+	Icon = "rbxassetid://6288032018",
+	PremiumOnly = false
+})
 
-local function teleportPlayer(player)
-    local success, errorMsg = pcall(function()
-        TeleportService:Teleport(destinationPlaceId, player)
-    end)
+local Section = Tab:AddSection({
+	Name = "Special Section"
+})
 
-    if not success then
-        print("Teleport failed:", errorMsg)
-    end
-end
-
-game.Players.PlayerAdded:Connect(function(player)
-    player.CharacterAdded:Connect(function(character)
-        teleportPlayer(player)
-    end)
-end)
-
+Tab:AddButton({
+	Name = "Anti-Afk",
+	Callback = function()
+      		loadstring(game:HttpGet(('https://pastebin.com/raw/Btt5A3CC')))()
   	end    
 })
 
