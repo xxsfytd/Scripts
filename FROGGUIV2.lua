@@ -175,7 +175,7 @@ Tab:AddButton({
 Tab:AddDropdown({
 	Name = "Troll",
 	Default = "Empty",
-	Options = {"Troll Tools", "Toggle Invisible", "Toggle Fling", "Chat Troll", " Spy Gui",},
+	Options = {"Troll Tools", "Toggle Invisible", "Toggle Fling", "Chat Troll", "Spy Gui",},
 	Callback = function(Value)
 		getgenv().SelectTroll = Value
 	end    
