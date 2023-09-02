@@ -24,11 +24,11 @@ Tab:AddToggle({
 	
 	if getgenv().AutoWin == "Slow" then
 	wait(3) 
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(56345, 183586, 409)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(56338, 183594, 418)
 	
 	elseif getgenv().AutoWin == "Fast" then
 	wait(1) 
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(56345, 183586, 409)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(56338, 183594, 418)
 	
 	
 	end
@@ -42,6 +42,18 @@ Tab:AddDropdown({
 	Options = {"Slow", "Fast",},
 	Callback = function(Value)
 		getgenv().AutoWin = Value
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Auto Rebirth",
+	Default = false,
+	Callback = function(Value)
+		_G.autoRebirth = Value
+		while _G.autoRebirth and wait(2) do
+		game:GetService("ReplicatedStorage"):WaitForChild("RebirthEvent"):FireServer()
+
+		end
 	end    
 })
 
@@ -146,6 +158,23 @@ Tab:AddToggle({
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("EggOpened"):InvokeServer(unpack(args))
 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(56333, 0, -94)
+
+		end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Auto Craft All",
+	Default = false,
+	Callback = function(Value)
+		_G.autoCraftAll = Value
+		while _G.autoCraftAll and wait() do
+		local args = {
+    [1] = "MaxCraft",
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("PetActionRequest"):InvokeServer(unpack(args))
 
 		end
 	end    
