@@ -162,7 +162,7 @@ Tab:AddButton({
 Tab:AddDropdown({
 	Name = "Select Fe Script",
 	Default = "Empty",
-	Options = {"Troll Tools", "Toggle Invisible", "Toggle Fling", "Chat Troll", "Spy Gui", "Toggle Noclip", "Teleport Tool", "Hitbox Expander",},
+	Options = {"Fun Tools", "Toggle Invisible", "Toggle Fling", "Chat Troll", "Spy Gui", "Toggle Noclip", "Teleport Tool", "Hitbox Expander",},
 	Callback = function(Value)
 		getgenv().SelectFe = Value
 	end    
