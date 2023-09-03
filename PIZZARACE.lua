@@ -97,3 +97,59 @@ game:GetService("ReplicatedStorage"):WaitForChild("DataRemoteEvent"):FireServer(
 		end
 	end    
 })
+
+Tab:AddToggle({
+	Name = "Auto Rebirth",
+	Default = false,
+	Callback = function(Value)
+		_G.autoRebirth = Value
+		while _G.autoRebirth and wait() do
+		local args = {
+    [1] = {
+        [1] = "\6",
+        [2] = {
+            [1] = "rebirth",
+            [2] = "add"
+        },
+        [3] = "\6",
+        [4] = {
+            [1] = "coins",
+            [2] = "remove",
+            [3] = 25000
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("DataRemoteEvent"):FireServer(unpack(args))
+
+		end
+	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Egg"
+})
+
+Tab:AddToggle({
+	Name = "Auto Hatch",
+	Default = false,
+	Callback = function(Value)
+		_G.autoHatch = Value
+		while _G.autoHatch and wait() do
+		local args = {
+    [1] = {
+        [1] = "\24",
+        [2] = {
+            [1] = workspace:WaitForChild("worlds"):WaitForChild("world1"):WaitForChild("boxes"):WaitForChild("world1Box3Gold"),
+            [2] = 61750,
+            [3] = "one",
+            [4] = {}
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("DataRemoteEvent"):FireServer(unpack(args))
+
+		end
+	end    
+})
