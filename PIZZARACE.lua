@@ -140,10 +140,15 @@ Tab:AddToggle({
     [1] = {
         [1] = "\24",
         [2] = {
-            [1] = workspace:WaitForChild("worlds"):WaitForChild("world1"):WaitForChild("boxes"):WaitForChild("world1Box3Gold"),
-            [2] = 61750,
+            [1] = workspace:WaitForChild("worlds"):WaitForChild("world4"):WaitForChild("boxes"):WaitForChild("world4Box3Gold"),
+            [2] = 101400000000,
             [3] = "one",
-            [4] = {}
+            [4] = {
+                [1] = "TechnoFlavorsChefGolden",
+                [2] = "DataMasterGolden",
+                [3] = "HolographicChefGolden",
+                [4] = "CyberTrackerChefGolden"
+            }
         }
     }
 }
