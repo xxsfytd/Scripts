@@ -10,7 +10,10 @@ local Tab = Window:MakeTab({
 getgenv().SelectScriptHub = "nil"
 getgenv().SelectAdmin = "nil"
 getgenv().SelectDex = "nil"
-getgenv().SelectTroll = "nil"
+getgenv().SelectFe = "nil"
+getgenv().SelectAoe = "nil"
+getgenv().SelectPH = "nil"
+getgenv().SelectLocalPlayer = "nil"
 
 local Section = Tab:AddSection({
 	Name = "Frog Gui V2"
@@ -43,6 +46,8 @@ Tab:AddButton({
       loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/ONEPIECEISREAL.lua')))()
       elseif getgenv().SelectScriptHub == "+1 Jump Per Second" then
       loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/JUMP.lua')))()
+      elseif getgenv().SelectScriptHub == "Ninja Simulator" then
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/NINJASIMULATOR.lua')))()
       
       end
   	end    
@@ -51,7 +56,7 @@ Tab:AddButton({
 Tab:AddDropdown({
 	Name = "Select Script",
 	Default = "Empty",
-	Options = {"Push Simulator", "Anime Clash Simulator", "Every 2 Min Ugc", "+1 Speed Per Second", "Radio Star Simulator", "One Piece Tycoon", "+1 Jump Per Second",},
+	Options = {"Push Simulator", "Anime Clash Simulator", "Every 2 Min Ugc", "+1 Speed Per Second", "Radio Star Simulator", "One Piece Tycoon", "+1 Jump Per Second", "Ninja Simulator",},
 	Callback = function(Value)
 		getgenv().SelectScriptHub = Value
 	end    
@@ -121,63 +126,72 @@ Tab:AddDropdown({
 })
 
 local Tab = Window:MakeTab({
-	Name = "Mobile Tab",
+	Name = "Fe & Mobile",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 local Section = Tab:AddSection({
-	Name = "Mobile Tab"
-})
-
-Tab:AddButton({
-	Name = "Keyboard",
-	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
-  	end    
-})
-
-Tab:AddButton({
-	Name = "Mobile Fly",
-	Callback = function()
-      		loadstring(game:HttpGet(('https://pastebin.com/raw/QGLvkvU7')))()
-  	end    
-})
-
-local Tab = Window:MakeTab({
-	Name = "Troll Tab",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-local Section = Tab:AddSection({
-	Name = "Troll Section"
+	Name = "Fe Section"
 })
 
 Tab:AddButton({
 	Name = "Execute",
 	Callback = function()
-      		if getgenv().SelectTroll == "Troll Tools" then
+      		if getgenv().SelectFe == "Fun Tools" then
       loadstring(game:HttpGet(('https://pastefy.app/VYIAk3o1/raw'),true))()
-      elseif getgenv().SelectTroll == "Toggle Invisible" then
+      elseif getgenv().SelectFe == "Toggle Invisible" then
       loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Invisible%20Gui'))()
-      elseif getgenv().SelectTroll == "Toggle Fling" then
+      elseif getgenv().SelectFe == "Toggle Fling" then
       loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Fling%20GUI"))()
-      elseif getgenv().SelectTroll == "Chat Troll" then
+      elseif getgenv().SelectFe == "Chat Troll" then
       loadstring(game:HttpGet(('https://pastefy.app/zCFEwaYq/raw'),true))()
-      elseif getgenv().SelectTroll == "Spy Gui" then
+      elseif getgenv().SelectFe == "Spy Gui" then
       loadstring(game:HttpGet("https://raw.githubusercontent.com/MichaelScripter/MiniScript/main/Spy%20gui.lua"))()
+      elseif getgenv().SelectFe == "Toggle Noclip" then
+      loadstring(game:HttpGet(('https://pastebin.com/raw/6T4skKuj')))()
+      elseif getgenv().SelectFe == "Teleport Tool" then
+      loadstring(game:HttpGet(('https://pastebin.com/raw/E0mTN6L6')))()
+      elseif getgenv().SelectFe == "Hitbox Expander" then
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/HitboxExpander.lua"))()
       
       end
   	end    
 })
 
 Tab:AddDropdown({
-	Name = "Troll",
+	Name = "Select Fe Script",
 	Default = "Empty",
-	Options = {"Troll Tools", "Toggle Invisible", "Toggle Fling", "Chat Troll", "Spy Gui",},
+	Options = {"Troll Tools", "Toggle Invisible", "Toggle Fling", "Chat Troll", "Spy Gui", "Toggle Noclip", "Teleport Tool", "Hitbox Expander",},
 	Callback = function(Value)
-		getgenv().SelectTroll = Value
+		getgenv().SelectFe = Value
+	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Mobile Section"
+})
+
+Tab:AddButton({
+	Name = "Execute",
+	Callback = function()
+      		if getgenv().SelectPH == "Keyboard" then
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+      elseif getgenv().SelectPH == "Fly Mobile" then
+      loadstring(game:HttpGet(('https://pastebin.com/raw/QGLvkvU7')))()
+      elseif getgenv().SelectPH == "Vehicle Fly" then
+      loadstring(game:HttpGet("https://pastebin.com/raw/MHE1cbWF"))()
+      
+      end
+  	end    
+})
+
+Tab:AddDropdown({
+	Name = "Select Mobile Script",
+	Default = "Empty",
+	Options = {"Keyboard", "Fly Mobile", "Vehicle Fly",},
+	Callback = function(Value)
+		getgenv().SelectPH = Value
 	end    
 })
 
@@ -218,28 +232,78 @@ end
 })
 
 local Section = Tab:AddSection({
-	Name = "Player"
+	Name = "Local Player"
 })
 
 Tab:AddButton({
-	Name = "Anti-Afk",
+	Name = "Execute",
 	Callback = function()
+	if getgenv().SelectLocalPlayer == "Anti-Afk" then
       		loadstring(game:HttpGet(('https://pastebin.com/raw/Btt5A3CC')))()
-  	end    
-})
-
-Tab:AddButton({
-	Name = "Reset Character",
-	Callback = function()
+      elseif getgenv().SelectLocalPlayer == "Reset Character" then
       		game:GetService("Players").LocalPlayer.Character:BreakJoints()
-  	end    
-})
-
-Tab:AddButton({
-	Name = "R6 Animate",
-	Callback = function()
+      elseif getgenv().SelectLocalPlayer == "R6 Animate" then
       		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Imagnir/r6_anims_for_r15/main/r6_anims.lua'),true))()
-  	end    
+      elseif getgenv().SelectLocalPlayer == "FPS Boost" then
+      _G.Settings = {
+
+    Players = {
+
+        ["Ignore Me"] = true, -- Ignore your Character
+
+        ["Ignore Others"] = true-- Ignore other Characters
+
+    },
+
+    Meshes = {
+
+        Destroy = false, -- Destroy Meshes
+
+        LowDetail = true -- Low detail meshes (NOT SURE IT DOES ANYTHING)
+
+    },
+
+    Images = {
+
+        Invisible = true, -- Invisible Images
+
+        LowDetail = false, -- Low detail images (NOT SURE IT DOES ANYTHING)
+
+        Destroy = false, -- Destroy Images
+
+    },
+
+    ["No Particles"] = true, -- Disables all ParticleEmitter, Trail, Smoke, Fire and Sparkles
+
+    ["No Camera Effects"] = true, -- Disables all PostEffect's (Camera/Lighting Effects)
+
+    ["No Explosions"] = true, -- Makes Explosion's invisible
+
+    ["No Clothes"] = true, -- Removes Clothing from the game
+
+    ["Low Water Graphics"] = true, -- Removes Water Quality
+
+    ["No Shadows"] = true, -- Remove Shadows
+
+    ["Low Rendering"] = true, -- Lower Rendering
+
+    ["Low Quality Parts"] = true -- Lower quality parts
+
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()
+      
+end
+end
+}) 
+
+Tab:AddDropdown({
+	Name = "Select Local Player",
+	Default = "Empty",
+	Options = {"Anti-Afk", "Reset Character", "R6 Animate", "FPS Boost",},
+	Callback = function(Value)
+		getgenv().SelectLocalPlayer = Value
+	end    
 })
 
 local Tab = Window:MakeTab({
