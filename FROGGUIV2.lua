@@ -1,12 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Frog Gui V2 🐸", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
-local Tab = Window:MakeTab({
-	Name = "Home",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
 getgenv().SelectScriptHub = "nil"
 getgenv().SelectAdmin = "nil"
 getgenv().SelectDex = "nil"
@@ -14,10 +8,15 @@ getgenv().SelectFe = "nil"
 getgenv().SelectAoe = "nil"
 getgenv().SelectPH = "nil"
 getgenv().SelectLocalPlayer = "nil"
+getgenv().SelectOther = "nil"
 
-local Section = Tab:AddSection({
-	Name = "Frog Gui V2"
+local Tab = Window:MakeTab({
+	Name = "Home",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
 })
+
+Tab:AddParagraph("Frog V2","better version of the Frog Gui Enjoy")
 
 local Tab = Window:MakeTab({
 	Name = "Script Hub",
@@ -26,8 +25,10 @@ local Tab = Window:MakeTab({
 })
 
 local Section = Tab:AddSection({
-	Name = "Made by Me"
+	Name = "Script Hub"
 })
+
+Tab:AddParagraph("Frog 🐸","All are made by me")
 
 Tab:AddButton({
 	Name = "Load Script",
@@ -48,6 +49,8 @@ Tab:AddButton({
       loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/JUMP.lua')))()
       elseif getgenv().SelectScriptHub == "Ninja Simulator" then
       loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/NINJASIMULATOR.lua')))()
+      elseif getgenv().SelectScriptHub == "Skibidi Tycoon" then
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/SKIBIDITYCOON.lua')))()
       
       end
   	end    
@@ -56,7 +59,7 @@ Tab:AddButton({
 Tab:AddDropdown({
 	Name = "Select Script",
 	Default = "Empty",
-	Options = {"Push Simulator", "Anime Clash Simulator", "Every 2 Min Ugc", "+1 Speed Per Second", "Radio Star Simulator", "One Piece Tycoon", "+1 Jump Per Second", "Ninja Simulator",},
+	Options = {"Push Simulator", "Anime Clash Simulator", "Every 2 Min Ugc", "+1 Speed Per Second", "Radio Star Simulator", "One Piece Tycoon", "+1 Jump Per Second", "Ninja Simulator", "Skibidi Tycoon",},
 	Callback = function(Value)
 		getgenv().SelectScriptHub = Value
 	end    
@@ -72,6 +75,8 @@ local Section = Tab:AddSection({
 	Name = "Admin Section"
 })
 
+Tab:AddParagraph("Fe Admin","Fe Admin that i found yes yes")
+
 Tab:AddButton({
 	Name = "Execute",
 	Callback = function()
@@ -83,15 +88,19 @@ Tab:AddButton({
       loadstring(game:HttpGet('https://pastebin.com/raw/RqaZUrBZ'))()
       elseif getgenv().SelectAdmin == "Fates Admin" then
       loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+      elseif getgenv().SelectAdmin == "GX Admin" then
+      loadstring(game:HttpGet("https://pastebin.com/raw/v6E9BmFK",true))();
+      elseif getgenv().SelectAdmin == "MyWorld Admin" then
+      loadstring(game:HttpGet(('https://pastebin.com/raw/CuQE1VdD')))()
       
       end
   	end    
 })
 
 Tab:AddDropdown({
-	Name = "Select Script",
+	Name = "Select Admin Script",
 	Default = "Empty",
-	Options = {"Infinite Yield", "Nameless Admin", "Revis Admin", "Fates Admin",},
+	Options = {"Infinite Yield", "Nameless Admin", "Revis Admin", "Fates Admin", "GX Admin", "MyWorld Admin",},
 	Callback = function(Value)
 		getgenv().SelectAdmin = Value
 	end    
@@ -101,14 +110,16 @@ local Section = Tab:AddSection({
 	Name = "Dex Section"
 })
 
+Tab:AddParagraph("Dex","All of dex versions Dex V1, Dex V2, and Dex V3 all are mobile support Dex V3 Is Recommended since it can copy paths etc by holding the folders, models, parts, etc")
+
 Tab:AddButton({
 	Name = "Execute",
 	Callback = function()
-      		if getgenv().SelectDex == "Dark Dex" then
+      		if getgenv().SelectDex == "Dex V2" then
       loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
-      elseif getgenv().SelectDex == "Old Dex" then
+      elseif getgenv().SelectDex == "Dex V1" then
       loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Dex/main/Dex.lua')))()
-      elseif getgenv().SelectDex == "Infinite Yield Dex" then
+      elseif getgenv().SelectDex == "Dex V3" then
       getgenv().Key = "Bash"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3AIY%20Dex",true))()
 
@@ -117,9 +128,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/ma
 })
 
 Tab:AddDropdown({
-	Name = "Select Script",
+	Name = "Select Dex Version",
 	Default = "Empty",
-	Options = {"Dark Dex", "Old Dex", "Infinite Yield Dex",},
+	Options = {"Dex V1", "Dex V2", "Dex V3",},
 	Callback = function(Value)
 		getgenv().SelectDex = Value
 	end    
@@ -134,6 +145,8 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Fe Section"
 })
+
+Tab:AddParagraph("Fe Scripts","Some of then can be used for mobile")
 
 Tab:AddButton({
 	Name = "Execute",
@@ -162,7 +175,7 @@ Tab:AddButton({
 Tab:AddDropdown({
 	Name = "Select Fe Script",
 	Default = "Empty",
-	Options = {"Fun Tools", "Toggle Invisible", "Toggle Fling", "Chat Troll", "Spy Gui", "Toggle Noclip", "Teleport Tool", "Hitbox Expander",},
+	Options = {"Fe Tools", "Toggle Invisible", "Toggle Fling", "Chat Troll", "Spy Gui", "Toggle Noclip", "Teleport Tool", "Hitbox Expander",},
 	Callback = function(Value)
 		getgenv().SelectFe = Value
 	end    
@@ -171,6 +184,8 @@ Tab:AddDropdown({
 local Section = Tab:AddSection({
 	Name = "Mobile Section"
 })
+
+Tab:AddParagraph("Mobile","Mobile issues well no more lol")
 
 Tab:AddButton({
 	Name = "Execute",
@@ -205,6 +220,8 @@ local Section = Tab:AddSection({
 	Name = "Prompts"
 })
 
+Tab:AddParagraph("Prompts","Prompts such as Gamepass and Ugc u can make them invisible or visible")
+
 Tab:AddButton({
 	Name = "Show Prompts",
 	Callback = function()
@@ -235,13 +252,13 @@ local Section = Tab:AddSection({
 	Name = "Local Player"
 })
 
+Tab:AddParagraph("Local Player","Your Setting 🐿")
+
 Tab:AddButton({
 	Name = "Execute",
 	Callback = function()
 	if getgenv().SelectLocalPlayer == "Anti-Afk" then
       		loadstring(game:HttpGet(('https://pastebin.com/raw/Btt5A3CC')))()
-      elseif getgenv().SelectLocalPlayer == "Reset Character" then
-      		game:GetService("Players").LocalPlayer.Character:BreakJoints()
       elseif getgenv().SelectLocalPlayer == "R6 Animate" then
       		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Imagnir/r6_anims_for_r15/main/r6_anims.lua'),true))()
       elseif getgenv().SelectLocalPlayer == "FPS Boost" then
@@ -300,18 +317,49 @@ end
 Tab:AddDropdown({
 	Name = "Select Local Player",
 	Default = "Empty",
-	Options = {"Anti-Afk", "Reset Character", "R6 Animate", "FPS Boost",},
+	Options = {"Anti-Afk", "R6 Animate", "FPS Boost",},
 	Callback = function(Value)
 		getgenv().SelectLocalPlayer = Value
 	end    
 })
 
+Tab:AddButton({
+	Name = "Reset Character",
+	Callback = function()
+      		game:GetService("Players").LocalPlayer.Character:BreakJoints()
+  	end    
+})
+
 local Tab = Window:MakeTab({
-	Name = "Coming Soon??",
+	Name = "Others",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
+local Section = Tab:AddSection({
+	Name = "Otherssss"
+})
+
+Tab:AddParagraph("Others","Sniper : RedBlue")
+
+Tab:AddButton({
+	Name = "Execute",
+	Callback = function()
+      		if getgenv().SelectOther == "Limited Sniper" then
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/JustAP1ayer/PlayerHubOther/main/PlayerHubIngameUgcLimitedsV2.lua')))()
+      
+      end
+  	end    
+})
+
+Tab:AddDropdown({
+	Name = "Select Others Script",
+	Default = "Empty",
+	Options = {"Limited Sniper",},
+	Callback = function(Value)
+		getgenv().SelectOther = Value
+	end    
+})
 
 
 
