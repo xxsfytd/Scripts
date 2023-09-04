@@ -29,7 +29,7 @@ Tab:AddToggle({
 	Default = false,
 	Callback = function(Value)
 		_G.autoBuy = Value
-		while _G.autoBuy and wait(5) do
+		while _G.autoBuy and wait(20) do
 		local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
