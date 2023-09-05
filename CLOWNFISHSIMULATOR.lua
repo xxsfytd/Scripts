@@ -198,7 +198,7 @@ local Section = Tab:AddSection({
 })
 
 Tab:AddButton({
-	Name = "Teleport to Alien Trail",
+	Name = "Teleport to Alien Base",
 	Callback = function()
       		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4619, 836, 2323)
   	end    
