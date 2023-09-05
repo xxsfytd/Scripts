@@ -22,7 +22,7 @@ local Section = Tab:AddSection({
 
 Tab:AddParagraph("Frog V2","better version of the Frog Gui Enjoy")
 
-Tab:AddParagraph("Updates",". . .")
+Tab:AddParagraph("Updates","Added ClownFish Script")
 
 local Tab = Window:MakeTab({
 	Name = "Script Hub",
@@ -67,7 +67,7 @@ Tab:AddButton({
 Tab:AddDropdown({
 	Name = "Select Script",
 	Default = "Empty",
-	Options = {"Push Simulator", "Anime Clash Simulator", "Every 2 Min Ugc", "+1 Speed Per Second", "Radio Star Simulator", "One Piece Tycoon", "+1 Jump Per Second", "Ninja Simulator", "Skibidi Tycoon", "Clown Fosh Simulator",},
+	Options = {"Push Simulator", "Anime Clash Simulator", "Every 2 Min Ugc", "+1 Speed Per Second", "Radio Star Simulator", "One Piece Tycoon", "+1 Jump Per Second", "Ninja Simulator", "Skibidi Tycoon", "Clown Fish Simulator",},
 	Callback = function(Value)
 		getgenv().SelectScriptHub = Value
 	end    
