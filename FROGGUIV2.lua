@@ -16,7 +16,13 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+local Section = Tab:AddSection({
+	Name = "Updates"
+})
+
 Tab:AddParagraph("Frog V2","better version of the Frog Gui Enjoy")
+
+Tab:AddParagraph("Updates",". . .")
 
 local Tab = Window:MakeTab({
 	Name = "Script Hub",
@@ -51,6 +57,8 @@ Tab:AddButton({
       loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/NINJASIMULATOR.lua')))()
       elseif getgenv().SelectScriptHub == "Skibidi Tycoon" then
       loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/SKIBIDITYCOON.lua')))()
+      elseif getgenv().SelectScriptHub == "Clown Fish Simulator" then
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/CLOWNFISHSIMULATOR.lua')))()
       
       end
   	end    
@@ -59,7 +67,7 @@ Tab:AddButton({
 Tab:AddDropdown({
 	Name = "Select Script",
 	Default = "Empty",
-	Options = {"Push Simulator", "Anime Clash Simulator", "Every 2 Min Ugc", "+1 Speed Per Second", "Radio Star Simulator", "One Piece Tycoon", "+1 Jump Per Second", "Ninja Simulator", "Skibidi Tycoon",},
+	Options = {"Push Simulator", "Anime Clash Simulator", "Every 2 Min Ugc", "+1 Speed Per Second", "Radio Star Simulator", "One Piece Tycoon", "+1 Jump Per Second", "Ninja Simulator", "Skibidi Tycoon", "Clown Fosh Simulator",},
 	Callback = function(Value)
 		getgenv().SelectScriptHub = Value
 	end    
@@ -340,7 +348,7 @@ local Section = Tab:AddSection({
 	Name = "Otherssss"
 })
 
-Tab:AddParagraph("Others","Sniper : RedBlue")
+Tab:AddParagraph("Others","Limited Sniper : RedBlue and Player")
 
 Tab:AddButton({
 	Name = "Execute",
