@@ -163,7 +163,7 @@ Tab:AddParagraph("Warning","Potato device might crash turning on.")
 Tab:AddLabel("Required Full Team pets with 10m+ power.")
 
 Tab:AddToggle({
-	Name = "Auto Bring Dummy",
+	Name = "Auto Bring Astro Warrior",
 	Default = false,
 	Callback = function(Value)
 		_G.autoBringDummy = Value
@@ -174,7 +174,7 @@ local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
-local modelName = "Dummy"  -- Change this to the name of the model
+local modelName = "Astro Warrior"  -- Change this to the name of the model
 
 local function teleportModelToPlayer(parent)
     for _, child in ipairs(parent:GetChildren()) do
@@ -200,7 +200,7 @@ local Section = Tab:AddSection({
 Tab:AddButton({
 	Name = "Teleport to Alien Trail",
 	Callback = function()
-      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4220, 633, 1793)
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4619, 836, 2323)
   	end    
 })
 
