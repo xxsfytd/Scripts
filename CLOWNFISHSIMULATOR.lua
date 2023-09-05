@@ -2,30 +2,35 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Clown Fish Simulator", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local Tab = Window:MakeTab({
-	Name = "Main",
+	Name = "Earth",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 local Section = Tab:AddSection({
-	Name = "Yee Haww"
+	Name = "Section"
 })
 
-Tab:AddParagraph("Original","Instant Kill by : Redblue")
+local Section = Tab:AddSection({
+	Name = "Auto Stuffs Yes"
+})
+
+Tab:AddParagraph("Warning","Potato device might crash turning on.")
+Tab:AddLabel("Required Full Team pets with 10m+ power.")
 
 Tab:AddToggle({
-	Name = "Auto Bring Horse Rider",
+	Name = "Auto Bring Robot",
 	Default = false,
 	Callback = function(Value)
-		_G.autoBringHorse = Value
-		while _G.autoBringHorse and wait(5) do
+		_G.autoBringRobot = Value
+		while _G.autoBringRobot and wait(0.5) do
 		-- Model Style
 
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
-local modelName = "Horse Rider"  -- Change this to the name of the model
+local modelName = "Robot"  -- Change this to the name of the model
 
 local function teleportModelToPlayer(parent)
     for _, child in ipairs(parent:GetChildren()) do
@@ -43,6 +48,173 @@ teleportModelToPlayer(game.Workspace)
 		end
 	end    
 })
+
+Tab:AddToggle({
+	Name = "Auto Bring Medic",
+	Default = false,
+	Callback = function(Value)
+		_G.autoBringMedic = Value
+		while _G.autoBringMedic and wait(0.5) do
+		-- Model Style
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+local modelName = "Medic"  -- Change this to the name of the model
+
+local function teleportModelToPlayer(parent)
+    for _, child in ipairs(parent:GetChildren()) do
+        if child:IsA("Model") and child.Name == modelName then
+            child:SetPrimaryPartCFrame(humanoidRootPart.CFrame)
+        end
+        teleportModelToPlayer(child)
+    end
+end
+
+-- Start the search from the entire workspace
+teleportModelToPlayer(game.Workspace)
+		end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Auto Bring Rocket Mech",
+	Default = false,
+	Callback = function(Value)
+		_G.autoBringRocket = Value
+		while _G.autoBringRocket and wait(0.5) do
+		-- Model Style
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+local modelName = "Rocket Mech"  -- Change this to the name of the model
+
+local function teleportModelToPlayer(parent)
+    for _, child in ipairs(parent:GetChildren()) do
+        if child:IsA("Model") and child.Name == modelName then
+            child:SetPrimaryPartCFrame(humanoidRootPart.CFrame)
+        end
+        teleportModelToPlayer(child)
+    end
+end
+
+-- Start the search from the entire workspace
+teleportModelToPlayer(game.Workspace)
+		end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Auto Bring Berserk",
+	Default = false,
+	Callback = function(Value)
+		_G.autoBringBerserk = Value
+		while _G.autoBringBerserk and wait(0.5) do
+		-- Model Style
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+local modelName = "Berserk"  -- Change this to the name of the model
+
+local function teleportModelToPlayer(parent)
+    for _, child in ipairs(parent:GetChildren()) do
+        if child:IsA("Model") and child.Name == modelName then
+            child:SetPrimaryPartCFrame(humanoidRootPart.CFrame)
+        end
+        teleportModelToPlayer(child)
+    end
+end
+
+-- Start the search from the entire workspace
+teleportModelToPlayer(game.Workspace)
+
+
+		end
+	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Lol"
+})
+
+Tab:AddButton({
+	Name = "Teleport to Walters Castle",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3182, 309, 13995)
+  	end    
+}) 
+
+local Tab = Window:MakeTab({
+	Name = "Space",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Hi"
+})
+
+Tab:AddParagraph("Warning","Potato device might crash turning on.")
+Tab:AddLabel("Required Full Team pets with 10m+ power.")
+
+Tab:AddToggle({
+	Name = "Auto Bring Dummy",
+	Default = false,
+	Callback = function(Value)
+		_G.autoBringDummy = Value
+		while _G.autoBringDummy and wait(0.5) do
+		-- Model Style
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+local modelName = "Dummy"  -- Change this to the name of the model
+
+local function teleportModelToPlayer(parent)
+    for _, child in ipairs(parent:GetChildren()) do
+        if child:IsA("Model") and child.Name == modelName then
+            child:SetPrimaryPartCFrame(humanoidRootPart.CFrame)
+        end
+        teleportModelToPlayer(child)
+    end
+end
+
+-- Start the search from the entire workspace
+teleportModelToPlayer(game.Workspace)
+
+
+		end
+	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "hhhhh🐿💀💀💀🦖🦖"
+})
+
+Tab:AddButton({
+	Name = "Teleport to Alien Trail",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4220, 633, 1793)
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Functions",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "noitces"
+})
+
+Tab:AddParagraph("Original","Instant Kill by : Redblue")
 
 Tab:AddButton({
 	Name = "Insta Kill Enemies",
@@ -95,9 +267,14 @@ end
   	end    
 })
 
-Tab:AddButton({
-	Name = "Teleport to Western",
-	Callback = function()
-      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1862, 275, 13989)
-  	end    
-}) 
+Tab:AddToggle({
+	Name = "Auto Kick",
+	Default = false,
+	Callback = function(Value)
+		_G.autoKick = Value
+		while _G.autoKick and wait() do
+		game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Kick"):FireServer()
+
+		end
+	end    
+})
