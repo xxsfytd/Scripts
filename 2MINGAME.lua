@@ -32,7 +32,7 @@ end
 Tab:AddButton({
 	Name = "Anti Afk (Not mine)",
 	Callback = function()
-      		loadstring(game:HttpGet(('https://pastebin.com/raw/Btt5A3CC')))()
+      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/RTrade/Voidz/main/AntiAFK.lua'),true))()
   	end    
 })
 
