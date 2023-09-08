@@ -13,6 +13,7 @@ getgenv().SelectSizePart = "nil"
 getgenv().SelectSizePartWall = "nil"
 getgenv().SelectBtoolsVer = "nil"
 getgenv().SelectPlayerVis = "nil"
+getgenv().SelectFeHats = "nil"
 
 local Tab = Window:MakeTab({
 	Name = "Home",
@@ -30,7 +31,7 @@ Tab:AddParagraph("Updates","Updates below")
 Tab:AddLabel("Added Backdoor Script")
 Tab:AddLabel("Added New Tab, Visual Tab")
 Tab:AddLabel("New Anti-Afk script old one got deleted")
-Tab:AddLabel("Added More Scripts at Fe Scripts")
+Tab:AddLabel("Added No Cd Prompt on Settings")
 Tab:AddLabel("Added Power Slap Simulator on Script Hub")
 Tab:AddLabel("Removed 2 min game Patched")
 
