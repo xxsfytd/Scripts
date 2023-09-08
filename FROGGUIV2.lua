@@ -29,7 +29,7 @@ Tab:AddParagraph("Updates","Updates below")
 
 Tab:AddParagraph("Script Hub","")
 
-Tab:AddParagraph("Fe Panel","")
+Tab:AddParagraph("Fe Panel","Added 'SimpleSpy'")
 
 Tab:AddParagraph("Fe & Mobile","Added 'Click to fling'")
 
