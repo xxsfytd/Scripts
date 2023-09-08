@@ -29,7 +29,7 @@ Tab:AddParagraph("Updates","Updates below")
 
 Tab:AddParagraph("Script Hub","")
 
-Tab:AddParagraph("Fe Panel","Added 'SimpleSpy'")
+Tab:AddParagraph("Fe Panel","")
 
 Tab:AddParagraph("Fe & Mobile","Added 'Click to fling'")
 
@@ -177,17 +177,6 @@ Tab:AddDropdown({
 	Callback = function(Value)
 		getgenv().SelectDex = Value
 	end    
-})
-
-local Section = Tab:AddSection({
-	Name = "Remote Spy Section"
-})
-
-Tab:AddButton({
-	Name = "Simple Spy",
-	Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/Forked/M%3ASimpleSpy%20V3",true))()
-  	end    
 })
 
 -- OVER HERE IS THE FE & MOBILE TAB
