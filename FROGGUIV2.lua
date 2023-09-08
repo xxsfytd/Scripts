@@ -9,6 +9,10 @@ getgenv().SelectAoe = "nil"
 getgenv().SelectPH = "nil"
 getgenv().SelectLocalPlayer = "nil"
 getgenv().SelectOther = "nil"
+getgenv().SelectSizePart = "nil"
+getgenv().SelectSizePartWall = "nil"
+getgenv().SelectBtoolsVer = "nil"
+getgenv().SelectPlayerVis = "nil"
 
 local Tab = Window:MakeTab({
 	Name = "Home",
@@ -22,7 +26,14 @@ local Section = Tab:AddSection({
 
 Tab:AddParagraph("Frog V2","better version of the Frog Gui Enjoy")
 
-Tab:AddParagraph("Updates","Added ClownFish Script")
+Tab:AddParagraph("Updates","Updates below")
+Tab:AddLabel("Added Backdoor Script")
+Tab:AddLabel("Added New Tab, Visual Tab")
+Tab:AddLabel("New Anti-Afk script old one got deleted")
+Tab:AddLabel("Added More Scripts at Fe Scripts")
+Tab:AddLabel("Added Power Slap Simulator on Script Hub")
+Tab:AddLabel("Removed 2 min game Patched")
+
 
 local Tab = Window:MakeTab({
 	Name = "Script Hub",
@@ -43,8 +54,6 @@ Tab:AddButton({
       loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/PUSHSIMULATOR.lua')))()
       elseif getgenv().SelectScriptHub == "Anime Clash Simulator" then
       loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/ANIMECLASHSIMULATOR.lua')))()
-      elseif getgenv().SelectScriptHub == "Every 2 Min Ugc" then
-      loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/2MINGAME.lua')))()
       elseif getgenv().SelectScriptHub == "+1 Speed Per Second" then
       loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/SPEED.lua')))()
       elseif getgenv().SelectScriptHub == "Radio Star Simulator" then
@@ -59,6 +68,8 @@ Tab:AddButton({
       loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/SKIBIDITYCOON.lua')))()
       elseif getgenv().SelectScriptHub == "Clown Fish Simulator" then
       loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/CLOWNFISHSIMULATOR.lua')))()
+      elseif getgenv().SelectScriptHub == "Power Slap Simulator" then
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/POWERSLAPSIMULATOR.lua')))()
       
       end
   	end    
@@ -67,7 +78,7 @@ Tab:AddButton({
 Tab:AddDropdown({
 	Name = "Select Script",
 	Default = "Empty",
-	Options = {"Push Simulator", "Anime Clash Simulator", "Every 2 Min Ugc", "+1 Speed Per Second", "Radio Star Simulator", "One Piece Tycoon", "+1 Jump Per Second", "Ninja Simulator", "Skibidi Tycoon", "Clown Fish Simulator",},
+	Options = {"Push Simulator", "Anime Clash Simulator", "+1 Speed Per Second", "Radio Star Simulator", "One Piece Tycoon", "+1 Jump Per Second", "Ninja Simulator", "Skibidi Tycoon", "Clown Fish Simulator", "Power Slap Simulator",},
 	Callback = function(Value)
 		getgenv().SelectScriptHub = Value
 	end    
@@ -159,7 +170,7 @@ Tab:AddParagraph("Fe Scripts","Some of then can be used for mobile")
 Tab:AddButton({
 	Name = "Execute",
 	Callback = function()
-      		if getgenv().SelectFe == "Fun Tools" then
+      		if getgenv().SelectFe == "Fe Tools" then
       loadstring(game:HttpGet(('https://pastefy.app/VYIAk3o1/raw'),true))()
       elseif getgenv().SelectFe == "Toggle Invisible" then
       loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Invisible%20Gui'))()
@@ -175,6 +186,8 @@ Tab:AddButton({
       loadstring(game:HttpGet(('https://pastebin.com/raw/E0mTN6L6')))()
       elseif getgenv().SelectFe == "Hitbox Expander" then
       loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/HitboxExpander.lua"))()
+      elseif getgenv().SelectFe == "Ghost Tool" then
+      loadstring(game:HttpGet("https://pastebin.com/raw/uUtRsAX5"))()
       
       end
   	end    
@@ -183,7 +196,7 @@ Tab:AddButton({
 Tab:AddDropdown({
 	Name = "Select Fe Script",
 	Default = "Empty",
-	Options = {"Fe Tools", "Toggle Invisible", "Toggle Fling", "Chat Troll", "Spy Gui", "Toggle Noclip", "Teleport Tool", "Hitbox Expander",},
+	Options = {"Fe Tools", "Toggle Invisible", "Toggle Fling", "Chat Troll", "Spy Gui", "Toggle Noclip", "Teleport Tool", "Hitbox Expander", "Ghost Tool",},
 	Callback = function(Value)
 		getgenv().SelectFe = Value
 	end    
@@ -217,6 +230,105 @@ Tab:AddDropdown({
 		getgenv().SelectPH = Value
 	end    
 })
+
+local Tab = Window:MakeTab({
+	Name = "Others",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Otherssss"
+})
+
+Tab:AddParagraph("Others","Limited Sniper : RedBlue and Player")
+
+Tab:AddButton({
+	Name = "Execute",
+	Callback = function()
+      		if getgenv().SelectOther == "Limited Sniper" then
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/JustAP1ayer/PlayerHubOther/main/PlayerHubIngameUgcLimitedsV2.lua')))()
+      elseif getgenv().SelectOther == "Backdoor Executor" then
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/v8/src/main.lua"))();
+      
+      end
+  	end    
+})
+
+Tab:AddDropdown({
+	Name = "Select Others Script",
+	Default = "Empty",
+	Options = {"Limited Sniper", "Backdoor Executor",},
+	Callback = function(Value)
+		getgenv().SelectOther = Value
+	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Visual Tab",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddParagraph("Note","All if it is visual only u can see it but have fun with it.")
+
+local Section = Tab:AddSection({
+	Name = "Btools"
+})
+
+Tab:AddButton({
+	Name = "Execute",
+	Callback = function()
+      		if getgenv().SelectBtoolsVer == "Btools" then
+      loadstring(game:HttpGet(('https://pastebin.com/raw/FBKJTUyw')))()
+      elseif getgenv().SelectBtoolsVer == "F3X" then
+      loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
+      
+      end
+  	end    
+})
+
+Tab:AddDropdown({
+	Name = "Select Btool Style",
+	Default = "Empty",
+	Options = {"Btools", "F3X"},
+	Callback = function(Value)
+		getgenv().SelectBtoolsVer = Value
+	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Visual Player"
+})
+
+Tab:AddParagraph("Note","Required R6 Body Type R6 Script wont work")
+
+Tab:AddButton({
+	Name = "Execute",
+	Callback = function()
+      		if getgenv().SelectPlayerVis == "Xester" then
+      loadstring(game:HttpGet(('https://pastebin.com/raw/1p9gSWK4')))()
+      elseif getgenv().SelectPlayerVis == "Ender V2" then
+      loadstring(game:HttpGet(('https://pastebin.com/raw/w7VLxJJM')))()
+      elseif getgenv().SelectPlayerVis == "Master Hand" then
+      loadstring(game:HttpGet(('https://pastebin.com/raw/pbnaf9XR')))()
+      elseif getgenv().SelectPlayerVis == "Critical Mass" then
+      loadstring(game:HttpGet(('https://pastebin.com/raw/skZ4BtTJ')))()
+      
+      end
+  	end    
+})
+
+Tab:AddDropdown({
+	Name = "Select Visual Player",
+	Default = "Empty",
+	Options = {"Xester", "Ender V2", "Master Hand", "Critical Mass",},
+	Callback = function(Value)
+		getgenv().SelectPlayerVis = Value
+	end    
+})
+
+
 
 local Tab = Window:MakeTab({
 	Name = "Settings",
@@ -257,6 +369,24 @@ end
 })
 
 local Section = Tab:AddSection({
+	Name = "No Cd"
+})
+
+Tab:AddButton({
+	Name = "No Cooldown Prompt",
+	Callback = function()
+      		while true do
+    for _, v in next, workspace:GetDescendants() do
+        if v:IsA("ProximityPrompt") then
+            v.HoldDuration = 0
+        end
+    end
+    wait(1)  -- Adjust the delay between loops as needed
+end
+  	end    
+})
+
+local Section = Tab:AddSection({
 	Name = "Local Player"
 })
 
@@ -266,7 +396,7 @@ Tab:AddButton({
 	Name = "Execute",
 	Callback = function()
 	if getgenv().SelectLocalPlayer == "Anti-Afk" then
-      		loadstring(game:HttpGet(('https://pastebin.com/raw/Btt5A3CC')))()
+      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/RTrade/Voidz/main/AntiAFK.lua'),true))()
       elseif getgenv().SelectLocalPlayer == "R6 Animate" then
       		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Imagnir/r6_anims_for_r15/main/r6_anims.lua'),true))()
       elseif getgenv().SelectLocalPlayer == "FPS Boost" then
@@ -336,37 +466,6 @@ Tab:AddButton({
 	Callback = function()
       		game:GetService("Players").LocalPlayer.Character:BreakJoints()
   	end    
-})
-
-local Tab = Window:MakeTab({
-	Name = "Others",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-local Section = Tab:AddSection({
-	Name = "Otherssss"
-})
-
-Tab:AddParagraph("Others","Limited Sniper : RedBlue and Player")
-
-Tab:AddButton({
-	Name = "Execute",
-	Callback = function()
-      		if getgenv().SelectOther == "Limited Sniper" then
-      loadstring(game:HttpGet(('https://raw.githubusercontent.com/JustAP1ayer/PlayerHubOther/main/PlayerHubIngameUgcLimitedsV2.lua')))()
-      
-      end
-  	end    
-})
-
-Tab:AddDropdown({
-	Name = "Select Others Script",
-	Default = "Empty",
-	Options = {"Limited Sniper",},
-	Callback = function(Value)
-		getgenv().SelectOther = Value
-	end    
 })
 
 
