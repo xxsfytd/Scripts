@@ -12,7 +12,7 @@ local Section = Tab:AddSection({
 })
 
 Tab:AddToggle({
-	Name = "Auto Gain",
+	Name = "Auto Sword",
 	Default = false,
 	Callback = function(Value)
 		_G.autoGain = Value
@@ -34,8 +34,10 @@ end
 })
 
 local Section = Tab:AddSection({
-	Name = "Op Auto Grinds"
+	Name = "yes"
 })
+
+Tab:AddParagraph("Wow","Fight a boss and activate it")
 
 Tab:AddToggle({
 	Name = "Auto Win",
@@ -48,81 +50,6 @@ Tab:AddToggle({
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Event"):WaitForChild("Game"):WaitForChild("[C-S]PlayerPKEnd"):FireServer(unpack(args))
-end
-	end    
-})
-
-Tab:AddButton({
-	Name = "Click Me First",
-	Callback = function()
-      		-- Find the player and the target part
-local player = game.Players.LocalPlayer
-local targetPart = game.Workspace.Check.p3_22 -- Replace "TargetPart" with the actual name of your target part
-
--- Teleport the player to the target part's position
-player.Character:MoveTo(targetPart.Position)
-
--- Wait for the player to reach the destination
-wait(1)  -- Adjust the wait time as needed
-
--- Find the ProximityPrompt on the target part
-local proximityPrompt = targetPart:FindFirstChildOfClass("ProximityPrompt")
-
--- Check if a ProximityPrompt was found
-if proximityPrompt then
-    -- Trigger the ProximityPrompt to activate it
-    proximityPrompt:InputHoldBegin(Enum.UserInputType.MouseButton1)
-    wait(2)  -- Adjust the wait time as needed
-    proximityPrompt:InputHoldEnd(Enum.UserInputType.MouseButton1)
-else
-    print("ProximityPrompt not found on target part.")
-end
-
--- Find the player and the target model
-local player = game.Players.LocalPlayer
-local targetModel = game.Workspace.World4.Boss.Yoriichi -- Replace "TargetModel" with the actual name of your target model
-
--- Get the position of the target model
-local targetPosition = targetModel.PrimaryPart.Position
-
--- Teleport the player to the target model's position
-player.Character:MoveTo(targetPosition)
-
--- Wait for the player to reach the destination
-wait(1)  -- Adjust the wait time as needed
-
--- Find the ProximityPrompt in the target model
-local proximityPrompt = targetModel:FindFirstChildOfClass("ProximityPrompt")
-
--- Check if a ProximityPrompt was found
-if proximityPrompt then
-    -- Trigger the ProximityPrompt to activate it
-    proximityPrompt:InputHoldBegin(Enum.UserInputType.MouseButton1)
-    wait(2)  -- Adjust the wait time as needed
-    proximityPrompt:InputHoldEnd(Enum.UserInputType.MouseButton1)
-else
-    print("ProximityPrompt not found in target model.")
-end
-
-
-  	end    
-})
-
-local Section = Tab:AddSection({
-	Name = "Egg"
-})
-
-Tab:AddToggle({
-	Name = "600t Wins Egg",
-	Default = false,
-	Callback = function(Value)
-		_G.autoEgg600t = Value
-  while _G.autoEgg600t and wait() do
-local args = {
-    [1] = "Egg20"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Function"):WaitForChild("Luck"):WaitForChild("[C-S]DoLuck"):InvokeServer(unpack(args))
 end
 	end    
 })
