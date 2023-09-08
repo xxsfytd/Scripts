@@ -7,13 +7,13 @@ getgenv().SelectDex = "nil"
 getgenv().SelectFe = "nil"
 getgenv().SelectAoe = "nil"
 getgenv().SelectPH = "nil"
-getgenv().SelectLocalPlayer = "nil"
+getgenv().SelectConfig = "nil"
 getgenv().SelectOther = "nil"
 getgenv().SelectSizePart = "nil"
 getgenv().SelectSizePartWall = "nil"
 getgenv().SelectBtoolsVer = "nil"
 getgenv().SelectPlayerVis = "nil"
-getgenv().SelectFeHats = "nil"
+getgenv().SelectRSPY = "nil"
 
 local Tab = Window:MakeTab({
 	Name = "Home",
@@ -25,16 +25,29 @@ local Section = Tab:AddSection({
 	Name = "Updates"
 })
 
-Tab:AddParagraph("Frog V2","better version of the Frog Gui Enjoy")
-
 Tab:AddParagraph("Updates","Updates below")
-Tab:AddLabel("Added Backdoor Script")
-Tab:AddLabel("Added New Tab, Visual Tab")
-Tab:AddLabel("New Anti-Afk script old one got deleted")
-Tab:AddLabel("Added No Cd Prompt on Settings")
-Tab:AddLabel("Added Power Slap Simulator on Script Hub")
-Tab:AddLabel("Removed 2 min game Patched")
 
+Tab:AddParagraph("Script Hub","")
+
+Tab:AddParagraph("Fe Panel","Added 'SimpleSpy'")
+
+Tab:AddParagraph("Fe & Mobile","Added 'Click to fling'")
+
+Tab:AddParagraph("Others","Added 'Script Browser'")
+
+Tab:AddParagraph("Visuals","Added 'WYD Form' 'Arch Angel' 'Illuminati'")
+
+Tab:AddParagraph("Settings","Added 'Anti Void' 'Player Walk Speed & Jump Power' 'Shiftlock'")
+
+-- OVER HERE IS THE SCRIPT HUB TAB
+
+-- OVER HERE IS THE SCRIPT HUB TAB
+
+-- OVER HERE IS THE SCRIPT HUB TAB
+
+-- OVER HERE IS THE SCRIPT HUB TAB
+
+-- OVER HERE IS THE SCRIPT HUB TAB
 
 local Tab = Window:MakeTab({
 	Name = "Script Hub",
@@ -85,8 +98,18 @@ Tab:AddDropdown({
 	end    
 })
 
+-- OVER HERE IS THE FE PANEL
+
+-- OVER HERE IS THE FE PANEL
+
+-- OVER HERE IS THE FE PANEL
+
+-- OVER HERE IS THE FE PANEL
+
+-- OVER HERE IS THE FE PANEL
+
 local Tab = Window:MakeTab({
-	Name = "Admin & Dex",
+	Name = "Fe Panel",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -156,6 +179,27 @@ Tab:AddDropdown({
 	end    
 })
 
+local Section = Tab:AddSection({
+	Name = "Remote Spy Section"
+})
+
+Tab:AddButton({
+	Name = "Simple Spy",
+	Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/Forked/M%3ASimpleSpy%20V3",true))()
+  	end    
+})
+
+-- OVER HERE IS THE FE & MOBILE TAB
+
+-- OVER HERE IS THE FE & MOBILE TAB
+
+-- OVER HERE IS THE FE & MOBILE TAB
+
+-- OVER HERE IS THE FE & MOBILE TAB
+
+-- OVER HERE IS THE FE & MOBILE TAB
+
 local Tab = Window:MakeTab({
 	Name = "Fe & Mobile",
 	Icon = "rbxassetid://4483345998",
@@ -189,6 +233,8 @@ Tab:AddButton({
       loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/HitboxExpander.lua"))()
       elseif getgenv().SelectFe == "Ghost Tool" then
       loadstring(game:HttpGet("https://pastebin.com/raw/uUtRsAX5"))()
+      elseif getgenv().SelectFe == "Click To Fling" then
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_5wpM7bBcOPspmX7lQ3m75SrYNWqxZ858ai3tJdEAId6jSI05IOUB224FQ0VSAswH.lua.txt'),true))()
       
       end
   	end    
@@ -197,7 +243,7 @@ Tab:AddButton({
 Tab:AddDropdown({
 	Name = "Select Fe Script",
 	Default = "Empty",
-	Options = {"Fe Tools", "Toggle Invisible", "Toggle Fling", "Chat Troll", "Spy Gui", "Toggle Noclip", "Teleport Tool", "Hitbox Expander", "Ghost Tool",},
+	Options = {"Fe Tools", "Toggle Invisible", "Toggle Fling", "Chat Troll", "Spy Gui", "Toggle Noclip", "Teleport Tool", "Hitbox Expander", "Ghost Tool", "Click To Fling",},
 	Callback = function(Value)
 		getgenv().SelectFe = Value
 	end    
@@ -232,6 +278,16 @@ Tab:AddDropdown({
 	end    
 })
 
+-- OVER HERE IS THE OTHERS TAB
+
+-- OVER HERE IS THE OTHERS TAB
+
+-- OVER HERE IS THE OTHERS TAB
+
+-- OVER HERE IS THE OTHERS TAB
+
+-- OVER HERE IS THE OTHERS TAB
+
 local Tab = Window:MakeTab({
 	Name = "Others",
 	Icon = "rbxassetid://4483345998",
@@ -251,6 +307,8 @@ Tab:AddButton({
       loadstring(game:HttpGet(('https://raw.githubusercontent.com/JustAP1ayer/PlayerHubOther/main/PlayerHubIngameUgcLimitedsV2.lua')))()
       elseif getgenv().SelectOther == "Backdoor Executor" then
       loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/v8/src/main.lua"))();
+      elseif getgenv().SelectOther == "Server Browser" then
+      loadstring(game:HttpGet(('https://rawscripts.net/raw/Server-Browser_80')))()
       
       end
   	end    
@@ -259,11 +317,21 @@ Tab:AddButton({
 Tab:AddDropdown({
 	Name = "Select Others Script",
 	Default = "Empty",
-	Options = {"Limited Sniper", "Backdoor Executor",},
+	Options = {"Limited Sniper", "Backdoor Executor", "Server Browser",},
 	Callback = function(Value)
 		getgenv().SelectOther = Value
 	end    
 })
+
+-- OVER HERE IS THE VISUAL TAB
+
+-- OVER HERE IS THE VISUAL TAB
+
+-- OVER HERE IS THE VISUAL TAB
+
+-- OVER HERE IS THE VISUAL TAB
+
+-- OVER HERE IS THE VISUAL TAB
 
 local Tab = Window:MakeTab({
 	Name = "Visual Tab",
@@ -315,6 +383,12 @@ Tab:AddButton({
       loadstring(game:HttpGet(('https://pastebin.com/raw/pbnaf9XR')))()
       elseif getgenv().SelectPlayerVis == "Critical Mass" then
       loadstring(game:HttpGet(('https://pastebin.com/raw/skZ4BtTJ')))()
+      elseif getgenv().SelectPlayerVis == "WYD Form" then
+      loadstring(game:HttpGet(('https://pastebin.com/raw/X3Y7adwk')))()
+      elseif getgenv().SelectPlayerVis == "Arch Angel" then
+      loadstring(game:HttpGet(('https://pastebin.com/raw/pUbrEfGS')))()
+      elseif getgenv().SelectPlayerVis == "Illuminati" then
+      loadstring(game:HttpGet(('https://pastebin.com/raw/xKeeFngN')))()
       
       end
   	end    
@@ -323,18 +397,66 @@ Tab:AddButton({
 Tab:AddDropdown({
 	Name = "Select Visual Player",
 	Default = "Empty",
-	Options = {"Xester", "Ender V2", "Master Hand", "Critical Mass",},
+	Options = {"Xester", "Ender V2", "Master Hand", "Critical Mass", "WYD Form", "ArchAngel", "Illuminati",},
 	Callback = function(Value)
 		getgenv().SelectPlayerVis = Value
 	end    
 })
 
+-- OVER HERE IS THE SETTINGS TAB
 
+-- OVER HERE IS THE SETTINGS TAB
+
+-- OVER HERE IS THE SETTINGS TAB
+
+-- OVER HERE IS THE SETTINGS TAB
+
+-- OVER HERE IS THE SETTINGS TAB
 
 local Tab = Window:MakeTab({
 	Name = "Settings",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Player"
+})
+
+Tab:AddButton({
+	Name = "Reset Character",
+	Callback = function()
+      		game:GetService("Players").LocalPlayer.Character:BreakJoints()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "ShiftLock",
+	Callback = function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Unknownproootest/Permanent-Shift-Lock-Alt/alt/PermShiftlockAlt'))()
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Player WS and JP"
+})
+
+Tab:AddTextbox({
+	Name = "Walk Speed",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+	end	  
+})
+
+Tab:AddTextbox({
+	Name = "Jump Power",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end	  
 })
 
 local Section = Tab:AddSection({
@@ -388,19 +510,19 @@ end
 })
 
 local Section = Tab:AddSection({
-	Name = "Local Player"
+	Name = "Configs"
 })
 
-Tab:AddParagraph("Local Player","Your Setting 🐿")
+Tab:AddParagraph("Config","Lol 🐿")
 
 Tab:AddButton({
 	Name = "Execute",
 	Callback = function()
-	if getgenv().SelectLocalPlayer == "Anti-Afk" then
+	if getgenv().SelectConfig == "Anti-Afk" then
       		loadstring(game:HttpGet(('https://raw.githubusercontent.com/RTrade/Voidz/main/AntiAFK.lua'),true))()
-      elseif getgenv().SelectLocalPlayer == "R6 Animate" then
+      elseif getgenv().SelectConfig == "R6 Animate" then
       		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Imagnir/r6_anims_for_r15/main/r6_anims.lua'),true))()
-      elseif getgenv().SelectLocalPlayer == "FPS Boost" then
+      elseif getgenv().SelectConfig == "FPS Boost" then
       _G.Settings = {
 
     Players = {
@@ -448,25 +570,20 @@ Tab:AddButton({
 }
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()
+      elseif getgenv().SelectConfig == "Anti-Void" then
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/zephyr10101/AntiFall/main/Script"))()
       
 end
 end
 }) 
 
 Tab:AddDropdown({
-	Name = "Select Local Player",
+	Name = "Select Config",
 	Default = "Empty",
-	Options = {"Anti-Afk", "R6 Animate", "FPS Boost",},
+	Options = {"Anti-Afk", "R6 Animate", "FPS Boost", "Anti-Void",},
 	Callback = function(Value)
-		getgenv().SelectLocalPlayer = Value
+		getgenv().SelectConfig = Value
 	end    
-})
-
-Tab:AddButton({
-	Name = "Reset Character",
-	Callback = function()
-      		game:GetService("Players").LocalPlayer.Character:BreakJoints()
-  	end    
 })
 
 
