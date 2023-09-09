@@ -25,19 +25,23 @@ local Section = Tab:AddSection({
 	Name = "Updates"
 })
 
+local Section = Tab:AddSection({
+	Name = "Version 1.0.5"
+})
+
 Tab:AddParagraph("Updates","Updates below")
 
-Tab:AddParagraph("Script Hub","")
+Tab:AddParagraph("Script Hub","Added :Hover Board Simulator:")
 
-Tab:AddParagraph("Fe Panel","Added 'SimpleSpy'")
+Tab:AddParagraph("Fe Panel","")
 
-Tab:AddParagraph("Fe & Mobile","Added 'Click to fling'")
+Tab:AddParagraph("Fe & Mobile","")
 
-Tab:AddParagraph("Others","Added 'Script Browser'")
+Tab:AddParagraph("Others","")
 
-Tab:AddParagraph("Visuals","Added 'WYD Form' 'Arch Angel' 'Illuminati'")
+Tab:AddParagraph("Visuals","Added :Jump in the CAAC: :Puppet Master:")
 
-Tab:AddParagraph("Settings","Added 'Anti Void' 'Player Walk Speed & Jump Power' 'Shiftlock'")
+Tab:AddParagraph("Settings","Added :Free Emote: :R6 Animate: :Shiftlock: :Keyboard: :Flashback:")
 
 -- OVER HERE IS THE SCRIPT HUB TAB
 
@@ -84,7 +88,8 @@ Tab:AddButton({
       loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/CLOWNFISHSIMULATOR.lua')))()
       elseif getgenv().SelectScriptHub == "Power Slap Simulator" then
       loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/POWERSLAPSIMULATOR.lua')))()
-      
+      elseif getgenv().SelectScriptHub == "Hoverboard Simulator" then
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/HOVERBOARDSIMULATOR.lua')))()
       end
   	end    
 })
@@ -92,7 +97,7 @@ Tab:AddButton({
 Tab:AddDropdown({
 	Name = "Select Script",
 	Default = "Empty",
-	Options = {"Push Simulator", "Anime Clash Simulator", "+1 Speed Per Second", "Radio Star Simulator", "One Piece Tycoon", "+1 Jump Per Second", "Ninja Simulator", "Skibidi Tycoon", "Clown Fish Simulator", "Power Slap Simulator",},
+	Options = {"Push Simulator", "Anime Clash Simulator", "+1 Speed Per Second", "Radio Star Simulator", "One Piece Tycoon", "+1 Jump Per Second", "Ninja Simulator", "Skibidi Tycoon", "Clown Fish Simulator", "Power Slap Simulator", "Hoverboard Simulator",},
 	Callback = function(Value)
 		getgenv().SelectScriptHub = Value
 	end    
@@ -247,9 +252,7 @@ Tab:AddParagraph("Mobile","Mobile issues well no more lol")
 Tab:AddButton({
 	Name = "Execute",
 	Callback = function()
-      		if getgenv().SelectPH == "Keyboard" then
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
-      elseif getgenv().SelectPH == "Fly Mobile" then
+      if getgenv().SelectPH == "Fly Mobile" then
       loadstring(game:HttpGet(('https://pastebin.com/raw/QGLvkvU7')))()
       elseif getgenv().SelectPH == "Vehicle Fly" then
       loadstring(game:HttpGet("https://pastebin.com/raw/MHE1cbWF"))()
@@ -287,7 +290,7 @@ local Section = Tab:AddSection({
 	Name = "Otherssss"
 })
 
-Tab:AddParagraph("Others","Limited Sniper : RedBlue and Player")
+Tab:AddParagraph("Others","others yeah")
 
 Tab:AddButton({
 	Name = "Execute",
@@ -378,6 +381,10 @@ Tab:AddButton({
       loadstring(game:HttpGet(('https://pastebin.com/raw/pUbrEfGS')))()
       elseif getgenv().SelectPlayerVis == "Illuminati" then
       loadstring(game:HttpGet(('https://pastebin.com/raw/xKeeFngN')))()
+      elseif getgenv().SelectPlayerVis == "Jump in the CAAC" then
+      loadstring(game:HttpGet(('https://pastebin.com/raw/LcC51n0u')))()
+      elseif getgenv().SelectPlayerVis == "Puppet Master" then
+      loadstring(game:HttpGet(('https://pastebin.com/raw/x5bRLryq')))()
       
       end
   	end    
@@ -386,7 +393,7 @@ Tab:AddButton({
 Tab:AddDropdown({
 	Name = "Select Visual Player",
 	Default = "Empty",
-	Options = {"Xester", "Ender V2", "Master Hand", "Critical Mass", "WYD Form", "ArchAngel", "Illuminati",},
+	Options = {"Xester", "Ender V2", "Master Hand", "Critical Mass", "WYD Form", "Arch Angel", "Illuminati", "Jump in the CAAC", "Puppet Master",},
 	Callback = function(Value)
 		getgenv().SelectPlayerVis = Value
 	end    
@@ -423,6 +430,31 @@ Tab:AddButton({
 	Name = "ShiftLock",
 	Callback = function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/Unknownproootest/Permanent-Shift-Lock-Alt/alt/PermShiftlockAlt'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Keyboard",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Animate"
+})
+
+Tab:AddButton({
+	Name = "R6 Animate",
+	Callback = function()
+      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Imagnir/r6_anims_for_r15/main/r6_anims.lua'),true))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Free Emote",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FEmotesGui/main/FEmotesGui.lua", true))()
   	end    
 })
 
@@ -502,15 +534,13 @@ local Section = Tab:AddSection({
 	Name = "Configs"
 })
 
-Tab:AddParagraph("Config","Lol 🐿")
+Tab:AddParagraph("Config","Scripts that are for your player yeah.")
 
 Tab:AddButton({
 	Name = "Execute",
 	Callback = function()
 	if getgenv().SelectConfig == "Anti-Afk" then
       		loadstring(game:HttpGet(('https://raw.githubusercontent.com/RTrade/Voidz/main/AntiAFK.lua'),true))()
-      elseif getgenv().SelectConfig == "R6 Animate" then
-      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Imagnir/r6_anims_for_r15/main/r6_anims.lua'),true))()
       elseif getgenv().SelectConfig == "FPS Boost" then
       _G.Settings = {
 
@@ -561,6 +591,8 @@ Tab:AddButton({
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()
       elseif getgenv().SelectConfig == "Anti-Void" then
       loadstring(game:HttpGet("https://raw.githubusercontent.com/zephyr10101/AntiFall/main/Script"))()
+      elseif getgenv().SelectConfig == "Flashback" then
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/L"))()
       
 end
 end
@@ -569,7 +601,7 @@ end
 Tab:AddDropdown({
 	Name = "Select Config",
 	Default = "Empty",
-	Options = {"Anti-Afk", "R6 Animate", "FPS Boost", "Anti-Void",},
+	Options = {"Anti-Afk", "FPS Boost", "Anti-Void", "Flashback",},
 	Callback = function(Value)
 		getgenv().SelectConfig = Value
 	end    
