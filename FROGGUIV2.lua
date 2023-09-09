@@ -26,12 +26,12 @@ local Section = Tab:AddSection({
 })
 
 local Section = Tab:AddSection({
-	Name = "Version 1.0.5"
+	Name = "Version 1.0.6"
 })
 
 Tab:AddParagraph("Updates","Updates below")
 
-Tab:AddParagraph("Script Hub","Added :Hover Board Simulator:")
+Tab:AddParagraph("Script Hub","Added :Lifting Simulator:")
 
 Tab:AddParagraph("Fe Panel","")
 
@@ -39,9 +39,9 @@ Tab:AddParagraph("Fe & Mobile","")
 
 Tab:AddParagraph("Others","")
 
-Tab:AddParagraph("Visuals","Added :Jump in the CAAC: :Puppet Master:")
+Tab:AddParagraph("Visuals","")
 
-Tab:AddParagraph("Settings","Added :Free Emote: :R6 Animate: :Shiftlock: :Keyboard: :Flashback:")
+Tab:AddParagraph("Settings","")
 
 -- OVER HERE IS THE SCRIPT HUB TAB
 
@@ -90,6 +90,9 @@ Tab:AddButton({
       loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/POWERSLAPSIMULATOR.lua')))()
       elseif getgenv().SelectScriptHub == "Hoverboard Simulator" then
       loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/HOVERBOARDSIMULATOR.lua')))()
+      elseif getgenv().SelectScriptHub == "Lifting Simulator" then
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/LIFTINGSIMULATOR.lua')))()
+      
       end
   	end    
 })
@@ -97,7 +100,7 @@ Tab:AddButton({
 Tab:AddDropdown({
 	Name = "Select Script",
 	Default = "Empty",
-	Options = {"Push Simulator", "Anime Clash Simulator", "+1 Speed Per Second", "Radio Star Simulator", "One Piece Tycoon", "+1 Jump Per Second", "Ninja Simulator", "Skibidi Tycoon", "Clown Fish Simulator", "Power Slap Simulator", "Hoverboard Simulator",},
+	Options = {"Push Simulator", "Anime Clash Simulator", "+1 Speed Per Second", "Radio Star Simulator", "One Piece Tycoon", "+1 Jump Per Second", "Ninja Simulator", "Skibidi Tycoon", "Clown Fish Simulator", "Power Slap Simulator", "Hoverboard Simulator", "Lifting Simulator",},
 	Callback = function(Value)
 		getgenv().SelectScriptHub = Value
 	end    
@@ -517,7 +520,7 @@ local Section = Tab:AddSection({
 })
 
 Tab:AddButton({
-	Name = "No Cooldown Prompt",
+	Name = "No Cooldown Proxy",
 	Callback = function()
       		while true do
     for _, v in next, workspace:GetDescendants() do
