@@ -11,7 +11,7 @@ local Section = Tab:AddSection({
 	Name = "Auto"
 })
 
-Tab:AddParagraph("Auto Weight 2","it cannot be stop and the more u click it the more faster it is but wlos device")
+Tab:AddParagraph("Auto Weight 2","it cannot be stop and the more u click it the more faster it is but slows device")
 
 Tab:AddToggle({
 	Name = "Auto Weight",
