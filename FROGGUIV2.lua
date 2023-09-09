@@ -331,7 +331,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("Note","All if it is visual only u can see it but have fun with it.")
+Tab:AddParagraph("Note","All is visual, only u can see it but have fun with it.")
 
 local Section = Tab:AddSection({
 	Name = "Btools"
